@@ -13,8 +13,8 @@ target 'MovieInvolved' do
 
   target 'MovieInvolvedTests' do
     inherit! :search_paths
-    # Pods for testing
-    pod 'Quick', git: 'https://github.com/Quick/Quick.git', branch: 'master'
+
+    pod 'Quick'
     pod 'Nimble'
   end
 
