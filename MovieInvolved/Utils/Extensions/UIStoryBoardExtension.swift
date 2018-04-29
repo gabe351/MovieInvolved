@@ -6,7 +6,7 @@
 //  Copyright © 2018 Gabe. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 extension UIStoryboard {
     static func loadViewController<T>() -> T where T: StoryboardLoadable, T: UIViewController {

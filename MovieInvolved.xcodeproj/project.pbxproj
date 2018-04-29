@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		0461E000209602F600803FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461DFFF209602F600803FFF /* AppDelegate.swift */; };
 		0461E002209602F600803FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461E001209602F600803FFF /* ViewController.swift */; };
-		0461E005209602F600803FFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0461E003209602F600803FFF /* Main.storyboard */; };
 		0461E007209602F800803FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0461E006209602F800803FFF /* Assets.xcassets */; };
 		0461E00A209602F800803FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0461E008209602F800803FFF /* LaunchScreen.storyboard */; };
 		0461E015209602F800803FFF /* MovieInvolvedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461E014209602F800803FFF /* MovieInvolvedTests.swift */; };
+		04D4134620965F07009CFDB4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4134520965F07009CFDB4 /* HomeViewController.swift */; };
+		04D4134920965F6F009CFDB4 /* HomeStoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4134820965F6F009CFDB4 /* HomeStoryboardLoadable.swift */; };
 		04E1852420960D1B00534733 /* BaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1852320960D1B00534733 /* BaseCallback.swift */; };
 		04E1852720960D3E00534733 /* CallbackEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1852620960D3E00534733 /* CallbackEnum.swift */; };
 		04E1852A20960D7200534733 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1852920960D7200534733 /* DateConverter.swift */; };
@@ -25,6 +26,7 @@
 		04E1853A209613EB00534733 /* DefaultValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E18539209613EB00534733 /* DefaultValues.swift */; };
 		04E1853C2096142000534733 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1853B2096142000534733 /* UIViewController.swift */; };
 		04E185402096146D00534733 /* LoaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1853F2096146D00534733 /* LoaderViewController.swift */; };
+		04F76215209660EF001326F1 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F76214209660EF001326F1 /* Home.storyboard */; };
 		12D0AD37D8D7002CDEF8EC10 /* Pods_MovieInvolvedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90F1302AA9D14121F210175 /* Pods_MovieInvolvedTests.framework */; };
 		D8FC856D298D2D8BC73AF193 /* Pods_MovieInvolved.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8545BFAAA02ADFC3A2A906B6 /* Pods_MovieInvolved.framework */; };
 /* End PBXBuildFile section */
@@ -43,13 +45,14 @@
 		0461DFFC209602F600803FFF /* MovieInvolved.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieInvolved.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0461DFFF209602F600803FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0461E001209602F600803FFF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0461E004209602F600803FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0461E006209602F800803FFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0461E009209602F800803FFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0461E00B209602F800803FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0461E010209602F800803FFF /* MovieInvolvedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieInvolvedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0461E014209602F800803FFF /* MovieInvolvedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInvolvedTests.swift; sourceTree = "<group>"; };
 		0461E016209602F800803FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04D4134520965F07009CFDB4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		04D4134820965F6F009CFDB4 /* HomeStoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoryboardLoadable.swift; sourceTree = "<group>"; };
 		04E1852320960D1B00534733 /* BaseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCallback.swift; sourceTree = "<group>"; };
 		04E1852620960D3E00534733 /* CallbackEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallbackEnum.swift; sourceTree = "<group>"; };
 		04E1852920960D7200534733 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		04E18539209613EB00534733 /* DefaultValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultValues.swift; sourceTree = "<group>"; };
 		04E1853B2096142000534733 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		04E1853F2096146D00534733 /* LoaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderViewController.swift; sourceTree = "<group>"; };
+		04F76214209660EF001326F1 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		194ED77AF827A592B20878D3 /* Pods-MovieInvolved.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInvolved.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieInvolved/Pods-MovieInvolved.release.xcconfig"; sourceTree = "<group>"; };
 		429E873EAC03F067ABCF8A3D /* Pods-MovieInvolvedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInvolvedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieInvolvedTests/Pods-MovieInvolvedTests.release.xcconfig"; sourceTree = "<group>"; };
 		8545BFAAA02ADFC3A2A906B6 /* Pods_MovieInvolved.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieInvolved.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,10 +118,10 @@
 			isa = PBXGroup;
 			children = (
 				04E1853D2096145600534733 /* Application */,
+				04F7621320966097001326F1 /* Infrastructure */,
 				04E1852220960D0100534733 /* Utils */,
 				0461DFFF209602F600803FFF /* AppDelegate.swift */,
 				0461E001209602F600803FFF /* ViewController.swift */,
-				0461E003209602F600803FFF /* Main.storyboard */,
 				0461E006209602F800803FFF /* Assets.xcassets */,
 				0461E008209602F800803FFF /* LaunchScreen.storyboard */,
 				0461E00B209602F800803FFF /* Info.plist */,
@@ -132,6 +136,32 @@
 				0461E016209602F800803FFF /* Info.plist */,
 			);
 			path = MovieInvolvedTests;
+			sourceTree = "<group>";
+		};
+		04D4134320965ED9009CFDB4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				04D4134420965EF6009CFDB4 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		04D4134420965EF6009CFDB4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				04D4134720965F58009CFDB4 /* Extensions */,
+				04D4134520965F07009CFDB4 /* HomeViewController.swift */,
+				04F76214209660EF001326F1 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		04D4134720965F58009CFDB4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				04D4134820965F6F009CFDB4 /* HomeStoryboardLoadable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		04E1852220960D0100534733 /* Utils */ = {
@@ -187,6 +217,7 @@
 		04E1853D2096145600534733 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				04D4134320965ED9009CFDB4 /* Modules */,
 				04E1853E2096146100534733 /* Common */,
 			);
 			path = Application;
@@ -198,6 +229,13 @@
 				04E1853F2096146D00534733 /* LoaderViewController.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		04F7621320966097001326F1 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 		F1D06A6FFCD50AD3D2E7FDAD /* Pods */ = {
@@ -309,7 +347,7 @@
 			files = (
 				0461E00A209602F800803FFF /* LaunchScreen.storyboard in Resources */,
 				0461E007209602F800803FFF /* Assets.xcassets in Resources */,
-				0461E005209602F600803FFF /* Main.storyboard in Resources */,
+				04F76215209660EF001326F1 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +463,7 @@
 				04E1853220960E2300534733 /* UIStoryBoardExtension.swift in Sources */,
 				04E1852F20960DF100534733 /* StoryboardLoadable.swift in Sources */,
 				04E1852420960D1B00534733 /* BaseCallback.swift in Sources */,
+				04D4134620965F07009CFDB4 /* HomeViewController.swift in Sources */,
 				04E1852C20960D9B00534733 /* RemoteUtils.swift in Sources */,
 				04E18538209613A500534733 /* UIDeviceExtension.swift in Sources */,
 				04E1853C2096142000534733 /* UIViewController.swift in Sources */,
@@ -432,6 +471,7 @@
 				04E1852720960D3E00534733 /* CallbackEnum.swift in Sources */,
 				04E1853620960E6C00534733 /* UIColorExtension.swift in Sources */,
 				04E185402096146D00534733 /* LoaderViewController.swift in Sources */,
+				04D4134920965F6F009CFDB4 /* HomeStoryboardLoadable.swift in Sources */,
 				04E1852A20960D7200534733 /* DateConverter.swift in Sources */,
 				04E1853420960E4E00534733 /* UIActivityIndicatorViewExtension.swift in Sources */,
 			);
@@ -456,14 +496,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0461E003209602F600803FFF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0461E004209602F600803FFF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0461E008209602F800803FFF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
