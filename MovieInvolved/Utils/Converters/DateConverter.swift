@@ -17,8 +17,8 @@ public class DateConverter {
         
         let index = dateStr?.index((dateStr?.startIndex)!, offsetBy: 10)
         
-        if let date = dateStr {
-            return dateFormatter.date(from: (dateStr?.substring(to: index!))!)
+        if let foundDate = dateStr {
+            return dateFormatter.date(from: (foundDate.substring(to: index!)))
         }
         
         return nil
