@@ -2,15 +2,13 @@
 //  ReleasesApiDataSource.swift
 //  MovieInvolved
 //
-//  Created by Gabriel Rosa on 29/04/18.
+//  Created by Gabriel Rosa on 01/05/18.
 //  Copyright © 2018 Gabe. All rights reserved.
 //
 
-
 import Foundation
-import Alamofire
-import AlamofireObjectMapper
 
-public class ReleasesApiDataSource {
-    
+protocol ReleasesApiDataSource {
+            
+    func allReleasesBy(page: Int, year: Int, _ loadCallback: @escaping (BaseCallback<ReleaseResponse>) -> Void)
 }

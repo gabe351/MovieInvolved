@@ -14,7 +14,7 @@ public class ReleaseResponse: NSObject, Mappable {
     var page: Int?
     var totalResults: Int?
     var totalPages: Int?
-    var resuls: [MovieResponse]?
+    var results: [MovieResponse]?
     
     override init() {
         super.init()
@@ -29,7 +29,7 @@ public class ReleaseResponse: NSObject, Mappable {
         page         <- map[APIField.page]
         totalResults <- map[APIField.totalResults]
         totalPages   <- map[APIField.totalPages]
-        resuls       <- map[APIField.results]
+        results      <- map[APIField.results]
     }
     
     private struct APIField {

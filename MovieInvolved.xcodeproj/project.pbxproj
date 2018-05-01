@@ -12,6 +12,7 @@
 		0461E007209602F800803FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0461E006209602F800803FFF /* Assets.xcassets */; };
 		0461E00A209602F800803FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0461E008209602F800803FFF /* LaunchScreen.storyboard */; };
 		0461E015209602F800803FFF /* MovieInvolvedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461E014209602F800803FFF /* MovieInvolvedTests.swift */; };
+		04D16B052098B485001496FA /* ReleasesApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D16B042098B485001496FA /* ReleasesApiDataSource.swift */; };
 		04D4134620965F07009CFDB4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4134520965F07009CFDB4 /* HomeViewController.swift */; };
 		04D4134920965F6F009CFDB4 /* HomeStoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D4134820965F6F009CFDB4 /* HomeStoryboardLoadable.swift */; };
 		04E1852420960D1B00534733 /* BaseCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1852320960D1B00534733 /* BaseCallback.swift */; };
@@ -33,7 +34,7 @@
 		04F762212096685C001326F1 /* DefaultDateIfNilActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F762202096685C001326F1 /* DefaultDateIfNilActionTest.swift */; };
 		04F76223209669BD001326F1 /* DefaultFloatIfNilActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F76222209669BD001326F1 /* DefaultFloatIfNilActionTest.swift */; };
 		04F7622520966AA6001326F1 /* DefaultIntIfNilActionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7622420966AA6001326F1 /* DefaultIntIfNilActionTest.swift */; };
-		04F7622920966CCE001326F1 /* ReleasesApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7622820966CCE001326F1 /* ReleasesApiDataSource.swift */; };
+		04F7622920966CCE001326F1 /* ReleasesApiDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7622820966CCE001326F1 /* ReleasesApiDataSourceImpl.swift */; };
 		04F7622C20966D45001326F1 /* ReleaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7622B20966D45001326F1 /* ReleaseResponse.swift */; };
 		04F7622E20966EE0001326F1 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7622D20966EE0001326F1 /* MovieResponse.swift */; };
 		04F762302098A96F001326F1 /* MovieDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7622F2098A96F001326F1 /* MovieDetailResponse.swift */; };
@@ -62,6 +63,7 @@
 		0461E010209602F800803FFF /* MovieInvolvedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieInvolvedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0461E014209602F800803FFF /* MovieInvolvedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInvolvedTests.swift; sourceTree = "<group>"; };
 		0461E016209602F800803FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04D16B042098B485001496FA /* ReleasesApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesApiDataSource.swift; sourceTree = "<group>"; };
 		04D4134520965F07009CFDB4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		04D4134820965F6F009CFDB4 /* HomeStoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoryboardLoadable.swift; sourceTree = "<group>"; };
 		04E1852320960D1B00534733 /* BaseCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCallback.swift; sourceTree = "<group>"; };
@@ -83,7 +85,7 @@
 		04F762202096685C001326F1 /* DefaultDateIfNilActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDateIfNilActionTest.swift; sourceTree = "<group>"; };
 		04F76222209669BD001326F1 /* DefaultFloatIfNilActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFloatIfNilActionTest.swift; sourceTree = "<group>"; };
 		04F7622420966AA6001326F1 /* DefaultIntIfNilActionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultIntIfNilActionTest.swift; sourceTree = "<group>"; };
-		04F7622820966CCE001326F1 /* ReleasesApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesApiDataSource.swift; sourceTree = "<group>"; };
+		04F7622820966CCE001326F1 /* ReleasesApiDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesApiDataSourceImpl.swift; sourceTree = "<group>"; };
 		04F7622B20966D45001326F1 /* ReleaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseResponse.swift; sourceTree = "<group>"; };
 		04F7622D20966EE0001326F1 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
 		04F7622F2098A96F001326F1 /* MovieDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailResponse.swift; sourceTree = "<group>"; };
@@ -311,7 +313,8 @@
 		04F7622720966C9E001326F1 /* Api */ = {
 			isa = PBXGroup;
 			children = (
-				04F7622820966CCE001326F1 /* ReleasesApiDataSource.swift */,
+				04F7622820966CCE001326F1 /* ReleasesApiDataSourceImpl.swift */,
+				04D16B042098B485001496FA /* ReleasesApiDataSource.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -555,11 +558,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04F7622920966CCE001326F1 /* ReleasesApiDataSource.swift in Sources */,
+				04F7622920966CCE001326F1 /* ReleasesApiDataSourceImpl.swift in Sources */,
 				0461E002209602F600803FFF /* ViewController.swift in Sources */,
 				0461E000209602F600803FFF /* AppDelegate.swift in Sources */,
 				04E1853220960E2300534733 /* UIStoryBoardExtension.swift in Sources */,
 				04F7622E20966EE0001326F1 /* MovieResponse.swift in Sources */,
+				04D16B052098B485001496FA /* ReleasesApiDataSource.swift in Sources */,
 				04E1852F20960DF100534733 /* StoryboardLoadable.swift in Sources */,
 				04E1852420960D1B00534733 /* BaseCallback.swift in Sources */,
 				04F7622C20966D45001326F1 /* ReleaseResponse.swift in Sources */,

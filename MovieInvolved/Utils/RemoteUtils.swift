@@ -15,6 +15,5 @@ class RemoteUtils {
     
     static func buildUrl(path: String) -> String {
         return "\(BASE_URL)\(path)"
-    }
-        
+    }            
 }
