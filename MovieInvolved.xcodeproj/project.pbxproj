@@ -36,6 +36,8 @@
 		04F7622920966CCE001326F1 /* ReleasesApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7622820966CCE001326F1 /* ReleasesApiDataSource.swift */; };
 		04F7622C20966D45001326F1 /* ReleaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7622B20966D45001326F1 /* ReleaseResponse.swift */; };
 		04F7622E20966EE0001326F1 /* MovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7622D20966EE0001326F1 /* MovieResponse.swift */; };
+		04F762302098A96F001326F1 /* MovieDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F7622F2098A96F001326F1 /* MovieDetailResponse.swift */; };
+		04F762322098AA5E001326F1 /* GenreResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F762312098AA5E001326F1 /* GenreResponse.swift */; };
 		12D0AD37D8D7002CDEF8EC10 /* Pods_MovieInvolvedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90F1302AA9D14121F210175 /* Pods_MovieInvolvedTests.framework */; };
 		D8FC856D298D2D8BC73AF193 /* Pods_MovieInvolved.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8545BFAAA02ADFC3A2A906B6 /* Pods_MovieInvolved.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		04F7622820966CCE001326F1 /* ReleasesApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleasesApiDataSource.swift; sourceTree = "<group>"; };
 		04F7622B20966D45001326F1 /* ReleaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReleaseResponse.swift; sourceTree = "<group>"; };
 		04F7622D20966EE0001326F1 /* MovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieResponse.swift; sourceTree = "<group>"; };
+		04F7622F2098A96F001326F1 /* MovieDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailResponse.swift; sourceTree = "<group>"; };
+		04F762312098AA5E001326F1 /* GenreResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreResponse.swift; sourceTree = "<group>"; };
 		194ED77AF827A592B20878D3 /* Pods-MovieInvolved.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInvolved.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieInvolved/Pods-MovieInvolved.release.xcconfig"; sourceTree = "<group>"; };
 		429E873EAC03F067ABCF8A3D /* Pods-MovieInvolvedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieInvolvedTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieInvolvedTests/Pods-MovieInvolvedTests.release.xcconfig"; sourceTree = "<group>"; };
 		8545BFAAA02ADFC3A2A906B6 /* Pods_MovieInvolved.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieInvolved.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -315,10 +319,20 @@
 		04F7622A20966D19001326F1 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				04F7622B20966D45001326F1 /* ReleaseResponse.swift */,
-				04F7622D20966EE0001326F1 /* MovieResponse.swift */,
+				04F762332098AF8B001326F1 /* Responses */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		04F762332098AF8B001326F1 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				04F7622B20966D45001326F1 /* ReleaseResponse.swift */,
+				04F7622D20966EE0001326F1 /* MovieResponse.swift */,
+				04F7622F2098A96F001326F1 /* MovieDetailResponse.swift */,
+				04F762312098AA5E001326F1 /* GenreResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		F1D06A6FFCD50AD3D2E7FDAD /* Pods */ = {
@@ -549,8 +563,10 @@
 				04E1852F20960DF100534733 /* StoryboardLoadable.swift in Sources */,
 				04E1852420960D1B00534733 /* BaseCallback.swift in Sources */,
 				04F7622C20966D45001326F1 /* ReleaseResponse.swift in Sources */,
+				04F762322098AA5E001326F1 /* GenreResponse.swift in Sources */,
 				04D4134620965F07009CFDB4 /* HomeViewController.swift in Sources */,
 				04E1852C20960D9B00534733 /* RemoteUtils.swift in Sources */,
+				04F762302098A96F001326F1 /* MovieDetailResponse.swift in Sources */,
 				04E18538209613A500534733 /* UIDeviceExtension.swift in Sources */,
 				04E1853C2096142000534733 /* UIViewController.swift in Sources */,
 				04E1853A209613EB00534733 /* DefaultValues.swift in Sources */,

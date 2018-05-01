@@ -16,9 +16,6 @@ public class MovieResponse: NSObject, Mappable {
     var originalTitle: String?
     var voteAverage: Float?
     var posterPath: String?
-    var backdropPath: String?
-    var overview: String?
-    var genreIds: [Int]?
     var releaseDate: String?
     
     override init() {
@@ -35,9 +32,6 @@ public class MovieResponse: NSObject, Mappable {
         originalTitle <- map[APIField.originalTitle]
         voteAverage   <- map[APIField.voteAverage]
         posterPath    <- map[APIField.posterPath]
-        backdropPath  <- map[APIField.backdropPath]
-        overview      <- map[APIField.overview]
-        genreIds      <- map[APIField.genreIds]
         releaseDate   <- map[APIField.releaseDate]
     }
     
@@ -48,9 +42,6 @@ public class MovieResponse: NSObject, Mappable {
         static let originalTitle = "original_title"
         static let voteAverage   = "vote_average"
         static let posterPath    = "poster_path"
-        static let backdropPath  = "backdrop_path"
-        static let overview      = "overview"
-        static let genreIds      = "genre_ids"
         static let releaseDate   = "release_date"
-    }        
+    }
 }
