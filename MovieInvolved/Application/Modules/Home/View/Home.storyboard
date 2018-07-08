@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fyl-N4-xH6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oxg-oz-jRK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -41,6 +41,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="searchMovieDidPressed:" destination="fyl-N4-xH6" eventType="touchUpInside" id="xcZ-T9-gLJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEb-xV-n1s" customClass="RoundedButton" customModule="MovieInvolved" customModuleProvider="target">
                                 <rect key="frame" x="88" y="388" width="200" height="45"/>
@@ -54,6 +57,9 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="releasesDidPressed:" destination="fyl-N4-xH6" eventType="touchUpInside" id="48w-IU-k2a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pcf-qf-Pgo" customClass="RoundedButton" customModule="MovieInvolved" customModuleProvider="target">
                                 <rect key="frame" x="87" y="473" width="200" height="45"/>
@@ -67,13 +73,41 @@
                                         <real key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="myMoviesDidPressed:" destination="fyl-N4-xH6" eventType="touchUpInside" id="HRR-pC-1Fo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="FqR-pq-2UC"/>
                     </view>
+                    <navigationItem key="navigationItem" id="oAs-0Z-5cg"/>
+                    <connections>
+                        <outlet property="myMoviesButton" destination="Pcf-qf-Pgo" id="bXg-xk-lPG"/>
+                        <outlet property="releasesButton" destination="sEb-xV-n1s" id="y1e-rI-BXe"/>
+                        <outlet property="searchMoviesButton" destination="xfu-Fb-u54" id="sdT-bo-dgf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNq-82-6aN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327.19999999999999" y="268.51574212893553"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SQq-nW-Wuk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oxg-oz-jRK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rDV-wa-5fL">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.47843137254901963" green="0.090196078431372548" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fyl-N4-xH6" kind="relationship" relationship="rootViewController" id="epF-eW-qt9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pcZ-W0-MaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-612" y="268.51574212893553"/>
         </scene>
