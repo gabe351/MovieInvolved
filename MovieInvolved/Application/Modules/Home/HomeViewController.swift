@@ -8,16 +8,17 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
-    public static let NIB_NAME = "Home"
-    public static let ID       = "HomeId"
-    
+    override class var NAME : String { return "Home" }
+    override class var ID : String { return "HomeID" }
+                
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         ReleasesApiDataSourceImpl().allReleasesBy { (call) in
             
         }                
-    }    
-    
+    }
 }
