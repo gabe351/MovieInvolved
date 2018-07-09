@@ -24,6 +24,7 @@ class MoviesCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
     
     func set(movies: [MovieDto]) {
         self.movies = movies
+        self.reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
