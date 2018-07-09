@@ -13,6 +13,8 @@
 		0461E007209602F800803FFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0461E006209602F800803FFF /* Assets.xcassets */; };
 		0461E00A209602F800803FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0461E008209602F800803FFF /* LaunchScreen.storyboard */; };
 		0461E015209602F800803FFF /* MovieInvolvedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0461E014209602F800803FFF /* MovieInvolvedTests.swift */; };
+		04664B8420F418BB00928E9C /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04664B8320F418BB00928E9C /* UIImageViewExtension.swift */; };
+		04664B8720F419DB00928E9C /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04664B8620F419DB00928E9C /* StringExtension.swift */; };
 		04784C4E20F29C830004954F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04784C4D20F29C830004954F /* RoundedButton.swift */; };
 		04784C5020F29D090004954F /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04784C4F20F29D090004954F /* RoundedImageView.swift */; };
 		04784C5320F2A7FB0004954F /* SearchMovie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04784C5220F2A7FB0004954F /* SearchMovie.storyboard */; };
@@ -76,6 +78,8 @@
 		0461E010209602F800803FFF /* MovieInvolvedTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieInvolvedTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0461E014209602F800803FFF /* MovieInvolvedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInvolvedTests.swift; sourceTree = "<group>"; };
 		0461E016209602F800803FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04664B8320F418BB00928E9C /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		04664B8620F419DB00928E9C /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		04784C4D20F29C830004954F /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		04784C4F20F29D090004954F /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		04784C5220F2A7FB0004954F /* SearchMovie.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchMovie.storyboard; sourceTree = "<group>"; };
@@ -203,6 +207,27 @@
 				0461E016209602F800803FFF /* Info.plist */,
 			);
 			path = MovieInvolvedTests;
+			sourceTree = "<group>";
+		};
+		04664B8520F419D200928E9C /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				04664B8620F419DB00928E9C /* StringExtension.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		04664B8920F419FA00928E9C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				04E1853120960E2300534733 /* UIStoryBoardExtension.swift */,
+				04E1853320960E4E00534733 /* UIActivityIndicatorViewExtension.swift */,
+				04E1853520960E6C00534733 /* UIColorExtension.swift */,
+				04E18537209613A500534733 /* UIDeviceExtension.swift */,
+				04E1853B2096142000534733 /* UIViewController.swift */,
+				04664B8320F418BB00928E9C /* UIImageViewExtension.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		04784C4C20F29C600004954F /* IBDesignables */ = {
@@ -344,11 +369,8 @@
 		04E1853020960E0400534733 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				04E1853120960E2300534733 /* UIStoryBoardExtension.swift */,
-				04E1853320960E4E00534733 /* UIActivityIndicatorViewExtension.swift */,
-				04E1853520960E6C00534733 /* UIColorExtension.swift */,
-				04E18537209613A500534733 /* UIDeviceExtension.swift */,
-				04E1853B2096142000534733 /* UIViewController.swift */,
+				04664B8520F419D200928E9C /* Foundation */,
+				04664B8920F419FA00928E9C /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -678,9 +700,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04664B8420F418BB00928E9C /* UIImageViewExtension.swift in Sources */,
 				04F7622920966CCE001326F1 /* ReleasesApiDataSourceImpl.swift in Sources */,
 				04784C5020F29D090004954F /* RoundedImageView.swift in Sources */,
 				0461E002209602F600803FFF /* ViewController.swift in Sources */,
+				04664B8720F419DB00928E9C /* StringExtension.swift in Sources */,
 				04784C5720F2AAA00004954F /* NewReleasesViewController.swift in Sources */,
 				04784C5E20F2AC500004954F /* MyMoviesViewController.swift in Sources */,
 				0461E000209602F600803FFF /* AppDelegate.swift in Sources */,
