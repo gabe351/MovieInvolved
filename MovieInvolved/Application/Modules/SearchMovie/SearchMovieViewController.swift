@@ -21,9 +21,14 @@ class SearchMovieViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.topViewController?.title = "Search movies"
-        moviesCollectionView.set(movies: createFakeMovies())
+        
+        guard let navigationController = self.navigationController else {
+            return
+        }
+        navigationController.isNavigationBarHidden = false
+        navigationController.topViewController?.title = "Search movies"
+                
+        moviesCollectionView.setupWith(movies: createFakeMovies(), navigationController: navigationController)
     }
     
     
@@ -33,7 +38,7 @@ class SearchMovieViewController: BaseViewController {
         
         movies.append(MovieDto(id: 123,
                                title: "My first movie",
-                               posterUrl: "invalid one",
+                               posterUrl: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/6sVtz4UEgcFUqEOnFGPnGgoePow.jpg",
                                releaseDate: "20/10/20018"))
         movies.append(MovieDto(id: 123,
                                title: "My first movie",

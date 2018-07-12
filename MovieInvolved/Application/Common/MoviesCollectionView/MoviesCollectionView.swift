@@ -11,6 +11,7 @@ import UIKit
 class MoviesCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     var movies = [MovieDto]()
+    var navigationController: UINavigationController?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -22,8 +23,9 @@ class MoviesCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
         self.dataSource = self
     }
     
-    func set(movies: [MovieDto]) {
+    func setupWith(movies: [MovieDto], navigationController: UINavigationController) {
         self.movies = movies
+        self.navigationController = navigationController
         self.reloadData()
     }
     
@@ -43,14 +45,15 @@ class MoviesCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let viewController = UIStoryboard.loadViewController() as MovieDetailViewController
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200,
-                      height: 210)
+        return CGSize(width: 375,
+                      height: 104)
     }
 }
 
