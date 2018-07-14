@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-public class ReleaseResponse: NSObject, Mappable {
+public class BaseMoviesResponse: NSObject, Mappable {
     
     var page: Int?
     var totalResults: Int?

@@ -16,9 +16,9 @@ protocol MovieRepository {
 //    
 //    func save(movie: Movie)
 //    
-//    func allReleases()
-//    
-//    func searchMovieBy(query: String) -> [Movie]
-//    
-//    func moveDetailBy(id: Int) -> MovieDetail    
+    func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void)
+    
+    func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void)
+    
+    func movieDetail(id: Int, _ loadCallback: @escaping (BaseCallback<MovieDetail>) -> Void)
 }

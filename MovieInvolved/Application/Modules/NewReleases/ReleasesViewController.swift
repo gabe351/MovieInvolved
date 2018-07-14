@@ -15,12 +15,7 @@ class ReleasesViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        ReleasesApiDataSourceImpl().allReleasesBy { (call) in
-            
-        }
-        
+                        
     }
     
     override func viewWillAppear(_ animated: Bool) {
