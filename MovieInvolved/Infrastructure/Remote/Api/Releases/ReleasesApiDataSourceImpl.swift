@@ -13,8 +13,7 @@ import AlamofireObjectMapper
 
 public class ReleasesApiDataSourceImpl: ReleasesApiDataSource {
     
-    init() {        
-    }
+    init() {}
     
     func allReleasesBy(page: Int = 1, year: Int = 2019, _ loadCallback: @escaping (BaseCallback<ReleaseResponse>) -> Void) {
         let parameters = buildParameters(page: page, year: year)
@@ -34,7 +33,6 @@ public class ReleasesApiDataSourceImpl: ReleasesApiDataSource {
         }
     }
     
-
     //    TODO: Get current date to show releases from this date!
     private func buildParameters(apiKey: String = "0bd449b4a197142635ab358c297053e6",
                                  sortBy: String = "release_date.asc",

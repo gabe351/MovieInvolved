@@ -19,11 +19,7 @@ class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTexts()
-        
-        ReleasesApiDataSourceImpl().allReleasesBy { (call) in
-            
-        }
+        configureTexts()                
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +33,7 @@ class HomeViewController: BaseViewController {
     }
         
     @IBAction func releasesDidPressed(_ sender: UIButton) {
-        let viewController = UIStoryboard.loadViewController() as NewReleasesViewController
+        let viewController = UIStoryboard.loadViewController() as ReleasesViewController
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     

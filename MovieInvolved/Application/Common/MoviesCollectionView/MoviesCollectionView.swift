@@ -55,5 +55,9 @@ class MoviesCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
         return CGSize(width: 375,
                       height: 104)
     }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("scroollll")
+    }
 }
 

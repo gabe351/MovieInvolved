@@ -8,13 +8,18 @@
 
 import UIKit
 
-class NewReleasesViewController: BaseViewController {
+class ReleasesViewController: BaseViewController {
     
     override class var NAME : String { return "NewReleases" }
     override class var ID : String { return "NewReleasesID" }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        ReleasesApiDataSourceImpl().allReleasesBy { (call) in
+            
+        }
         
     }
     

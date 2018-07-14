@@ -23,3 +23,4 @@ class MyMoviesViewController: BaseViewController {
         self.navigationController?.topViewController?.title = "My movies"
     }
 }
+
