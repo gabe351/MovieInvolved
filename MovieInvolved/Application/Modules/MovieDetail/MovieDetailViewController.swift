@@ -21,6 +21,8 @@ class MovieDetailViewController: BaseViewController, MovieDetailViewContract {
     
     var movieId: Int = 0
     
+    let loader = LoadingViewController()
+    
     lazy var presenter: MovieDetailPresenterContract = {
        return MovieDetailPresenter(view: self,
                                    getMovie: InjectionUseCase.provideGetMovies())
@@ -47,13 +49,25 @@ class MovieDetailViewController: BaseViewController, MovieDetailViewContract {
             fullGenres.append(genre.name)
         }
         
-        genreLabel.text = "Genre \(fullGenres)"                
+        genreLabel.text = "Genre \(fullGenres)"
+        
+        if fullGenres.isEmpty {
+            genreLabel.text = "Genre: "
+        }
     }
     
     func onError() {
         ToastBuilder(message: "Error on request, check internet", view: self.view)
             .with(position: .center)
             .show()
+    }
+    
+    func showLoader() {
+        add(loader)
+    }
+    
+    func hideLoader() {
+        loader.remove()
     }
     
     private func configureView() {

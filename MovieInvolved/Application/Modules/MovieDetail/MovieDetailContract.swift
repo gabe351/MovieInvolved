@@ -11,6 +11,8 @@ import Foundation
 protocol MovieDetailViewContract {
     func show(detail: MovieDetail)
     func onError()
+    func showLoader()
+    func hideLoader()
 }
 
 protocol MovieDetailPresenterContract {
