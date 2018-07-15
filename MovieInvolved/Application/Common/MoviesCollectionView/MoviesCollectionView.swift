@@ -12,6 +12,7 @@ class MoviesCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
     
     var movies = [Movie]()
     var navigationController: UINavigationController?
+    var contract: MoviesCollectionViewContract?
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -44,9 +45,8 @@ class MoviesCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let viewController = UIStoryboard.loadViewController() as MovieDetailViewController
-        self.navigationController?.pushViewController(viewController, animated: true)
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {                
+        contract?.goToDetail(id: movies[indexPath.row].id)
     }
     
     func collectionView(_ collectionView: UICollectionView,
@@ -57,7 +57,7 @@ class MoviesCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("scroollll")
+        contract?.request(nextPage: 1)
     }
 }
 

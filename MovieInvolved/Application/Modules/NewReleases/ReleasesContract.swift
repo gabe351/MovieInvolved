@@ -9,11 +9,13 @@
 import Foundation
 
 protocol ReleasesViewContract {
-    
-    func showReleases()
-    
+    func show(movies: [Movie])
+    func emptyList()
+    func onError()
+    func showLoader()
+    func hideLoader()    
 }
 
 protocol ReleasesPresenterContract {
-    func loadReleases()
+    func loadReleases(page: Int)
 }

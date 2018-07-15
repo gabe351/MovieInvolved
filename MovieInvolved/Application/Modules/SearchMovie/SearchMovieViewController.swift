@@ -31,6 +31,7 @@ class SearchMovieViewController: BaseViewController, SearchMovieViewContract, UI
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)        
         configureView()
+        moviesCollectionView.contract = self
     }
 
     
@@ -39,7 +40,7 @@ class SearchMovieViewController: BaseViewController, SearchMovieViewContract, UI
             return
         }
         
-        presenter.findMovie(query: query)
+        presenter.findMovie(page: 1, query: query)
     }
     
     func show(movies: [Movie]) {
@@ -76,5 +77,18 @@ class SearchMovieViewController: BaseViewController, SearchMovieViewContract, UI
         navigationController.topViewController?.title = "Search movies"
         
         moviesCollectionView.setupWith(movies: [], navigationController: navigationController)
+    }
+}
+
+extension SearchMovieViewController: MoviesCollectionViewContract {
+    
+    func request(nextPage: Int) {
+        
+    }
+    
+    func goToDetail(id: Int) {
+        let viewController = UIStoryboard.loadViewController() as MovieDetailViewController
+        viewController.movieId = id
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

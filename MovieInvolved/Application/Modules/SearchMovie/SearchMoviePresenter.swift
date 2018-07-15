@@ -18,9 +18,9 @@ class SearchMoviePresenter: SearchMoviePresenterContract {
         self.getMovie = getMovie
     }
     
-    func findMovie(query: String) {
+    func findMovie(page: Int, query: String) {
         view.showLoader()
-        getMovie.searchMovieBy(query: query, page: 1) { (useCaseCallback) in
+        getMovie.searchMovieBy(query: query, page: page) { (useCaseCallback) in
             useCaseCallback.onSuccess { movie in
                 self.view.hideLoader()
                 self.view.show(movies: movie)
@@ -36,5 +36,5 @@ class SearchMoviePresenter: SearchMoviePresenterContract {
                 self.view.onError()
             }
         }
-    }    
+    }
 }

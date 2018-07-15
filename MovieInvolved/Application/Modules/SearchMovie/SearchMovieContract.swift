@@ -17,5 +17,5 @@ protocol SearchMovieViewContract {
 }
 
 protocol SearchMoviePresenterContract {
-    func findMovie(query: String)
+    func findMovie(page: Int, query: String)
 }

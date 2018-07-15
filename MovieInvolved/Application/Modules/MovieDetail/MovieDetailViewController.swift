@@ -8,12 +8,23 @@
 
 import UIKit
 
-class MovieDetailViewController: BaseViewController {
+class MovieDetailViewController: BaseViewController, MovieDetailViewContract {
     
     override class var NAME : String { return "MovieDetail" }
     override class var ID : String { return "MovieDetailID" }
     
     @IBOutlet weak var movieImageView: UIImageView!
+    @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var releaseDateLabel: UILabel!
+    @IBOutlet weak var genreLabel: UILabel!
+    @IBOutlet weak var movieDescriptionTextView: UITextView!
+    
+    var movieId: Int = 0
+    
+    lazy var presenter: MovieDetailPresenterContract = {
+       return MovieDetailPresenter(view: self,
+                                   getMovie: InjectionUseCase.provideGetMovies())
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +32,36 @@ class MovieDetailViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden    = false
-        self.navigationController?.topViewController?.title = "Movie detail"
-        movieImageView.setImageFrom(url: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/6sVtz4UEgcFUqEOnFGPnGgoePow.jpg", placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
+        configureView()
+        presenter.loadMovieDetail(id: movieId)
+    }
+    
+    func show(detail: MovieDetail) {
+        var fullGenres = [String]()
+        movieImageView.setImageFrom(url: RemoteUtils.buildImageUrl(path: detail.posterPath), placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
+        movieTitle.text       = detail.title
+        releaseDateLabel.text = "Release: \(detail.releaseDate)"
+        movieDescriptionTextView.text = detail.overview
+        
+        detail.genres.forEach { (genre) in
+            fullGenres.append(genre.name)
+        }
+        
+        genreLabel.text = "Genre \(fullGenres)"                
+    }
+    
+    func onError() {
+        ToastBuilder(message: "Error on request, check internet", view: self.view)
+            .with(position: .center)
+            .show()
+    }
+    
+    private func configureView() {
+        guard let navigationController = self.navigationController else {
+            return
+        }
+        
+        navigationController.isNavigationBarHidden    = false
+        navigationController.topViewController?.title = "Movie detail"
     }
 }
