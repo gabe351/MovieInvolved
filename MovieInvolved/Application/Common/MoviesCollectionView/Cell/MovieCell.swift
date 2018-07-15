@@ -17,10 +17,10 @@ class MovieCell: UICollectionViewCell {
     @IBOutlet weak var movieDateLabel: UILabel!
     @IBOutlet weak var movieImageView: UIImageView!
     
-    func configureView(movie: MovieDto) {
+    func configureView(movie: Movie) {
+        let imageUrl         = RemoteUtils.buildImageUrl(path: movie.posterPath)
         movieTitleLabel.text = movie.title
         movieDateLabel.text  = movie.releaseDate
-        movieImageView.setImageFrom(url: movie.posterUrl, placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
-    }
-    
+        movieImageView.setImageFrom(url: imageUrl, placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
+    }    
 }

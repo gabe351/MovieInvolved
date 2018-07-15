@@ -41,6 +41,7 @@
                     </view>
                     <connections>
                         <outlet property="moviesCollectionView" destination="qy8-07-laj" id="dws-Us-avW"/>
+                        <outlet property="searchBar" destination="d6l-dl-GOf" id="nKG-gB-Xsr"/>
                         <outlet property="searchDisplayController" destination="v8F-Mv-7k4" id="GvR-v7-i1d"/>
                     </connections>
                 </viewController>

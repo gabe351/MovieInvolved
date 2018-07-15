@@ -38,6 +38,10 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
                     return
                 }
                 
+                if moviesResponse.isEmpty {
+                    loadCallback(BaseCallback.emptyData())
+                }
+                
                 let movies = MovieConverter.responsesToEntities(responses: moviesResponse)
                 
                 loadCallback(BaseCallback.success(movies))
@@ -64,6 +68,10 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
                     return
                 }
                 
+                if moviesResponse.isEmpty {
+                    loadCallback(BaseCallback.emptyData())
+                }
+                
                 let movies = MovieConverter.responsesToEntities(responses: moviesResponse)
                 
                 loadCallback(BaseCallback.success(movies))
@@ -85,7 +93,7 @@ class MovieApiDataSourceImpl: MovieApiDataSource {
             case .success(let response):
                 let movieResponse = MovieConverter.detailResponseToEntity(response: response)
                 
-                loadCallback(BaseCallback.success(movieResponse))                
+                loadCallback(BaseCallback.success(movieResponse))
                 break
                 
             case .failure(let error):

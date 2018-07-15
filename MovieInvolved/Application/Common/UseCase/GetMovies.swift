@@ -17,14 +17,14 @@ class GetMovies {
     }
     
     func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
-        
+        repository.allReleasesBy(page: page, loadCallback)
     }
     
     func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
-        
+        repository.searchMovieBy(query: query, page: page, loadCallback)
     }
     
     func movieDetail(id: Int, _ loadCallback: @escaping (BaseCallback<MovieDetail>) -> Void) {
-        
+        repository.movieDetail(id: id, loadCallback)
     }
 }

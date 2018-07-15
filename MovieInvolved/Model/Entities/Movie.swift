@@ -16,5 +16,4 @@ struct Movie {
     let voteAverage: Float
     let posterPath: String
     let releaseDate: String
-    
 }

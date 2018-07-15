@@ -10,7 +10,7 @@ import UIKit
 
 class MoviesCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
-    var movies = [MovieDto]()
+    var movies = [Movie]()
     var navigationController: UINavigationController?
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,8 +23,8 @@ class MoviesCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
         self.dataSource = self
     }
     
-    func setupWith(movies: [MovieDto], navigationController: UINavigationController) {
-        self.movies = movies
+    func setupWith(movies: [Movie], navigationController: UINavigationController) {
+        self.movies               = movies
         self.navigationController = navigationController
         self.reloadData()
     }
@@ -37,9 +37,9 @@ class MoviesCollectionView: UICollectionView, UICollectionViewDelegateFlowLayout
         
         let cell = self.dequeueReusableCell(withReuseIdentifier: MovieCell.IDENTIFIER, for: indexPath as IndexPath) as! MovieCell
         
-        let movieDto = movies[indexPath.row]
+        let movie = movies[indexPath.row]
         
-        cell.configureView(movie: movieDto)
+        cell.configureView(movie: movie)
         
         return cell
     }
