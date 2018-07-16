@@ -10,12 +10,12 @@ import Foundation
 
 protocol MovieRepository {
     
-//    func findMovieDetailBy(id: Int) -> MovieDetail
-//    
-//    func allMovies() -> Movie
-//    
-//    func save(movie: Movie)
-//    
+    func findMovieDetailBy(id: Int) -> MovieDetail
+    
+    func allMovies() -> [Movie]
+    
+    func save(movie: MovieDetail) -> MovieDetail?
+    
     func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void)
     
     func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void)

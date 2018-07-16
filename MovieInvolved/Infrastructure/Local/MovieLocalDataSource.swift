@@ -12,7 +12,7 @@ protocol MovieLocalDataSource {
     
     func findMovieDetailBy(id: Int) -> MovieDetail
     
-    func allMovies() -> Movie
+    func allMovies() -> [Movie]
     
-    func save(movie: Movie)
+    func save(movie: MovieDetail) -> MovieDetail?
 }

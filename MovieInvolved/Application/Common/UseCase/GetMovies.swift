@@ -16,6 +16,18 @@ class GetMovies {
         self.repository = repository
     }
     
+    func findMovieDetailBy(id: Int) -> MovieDetail {
+        return repository.findMovieDetailBy(id: id)
+    }
+    
+    func allMovies() -> [Movie] {
+        return repository.allMovies()
+    }
+    
+    func save(movie: MovieDetail) -> MovieDetail? {
+        return repository.save(movie: movie)
+    }
+    
     func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
         repository.allReleasesBy(page: page, loadCallback)
     }

@@ -89,6 +89,7 @@ extension SearchMovieViewController: MoviesCollectionViewContract {
     func goToDetail(id: Int) {
         let viewController = UIStoryboard.loadViewController() as MovieDetailViewController
         viewController.movieId = id
+        viewController.isLocal = false
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

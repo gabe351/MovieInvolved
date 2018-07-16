@@ -36,6 +36,18 @@ class MovieRepositoryImpl: MovieRepository {
         INSTANCE = nil
     }
     
+    func findMovieDetailBy(id: Int) -> MovieDetail {
+        return localDataSource.findMovieDetailBy(id: id)
+    }
+    
+    func allMovies() -> [Movie] {
+        return localDataSource.allMovies()
+    }
+    
+    func save(movie: MovieDetail) -> MovieDetail? {
+        return localDataSource.save(movie: movie)
+    }
+    
     func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
         remoteDataSource.searchMovieBy(query: query, page: page, loadCallback)
     }

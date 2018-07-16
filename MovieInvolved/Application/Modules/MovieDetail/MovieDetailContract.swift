@@ -13,8 +13,10 @@ protocol MovieDetailViewContract {
     func onError()
     func showLoader()
     func hideLoader()
+    func onSaveSuccess()
 }
 
 protocol MovieDetailPresenterContract {
     func loadMovieDetail(id: Int)
+    func save(movie: MovieDetail)
 }

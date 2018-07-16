@@ -10,7 +10,7 @@ target 'MovieInvolved' do
   pod 'Toast-Swift', git: 'https://github.com/scalessec/Toast-Swift.git', branch: 'feature/Swift-4'
   pod 'UIColor_Hex_Swift', '~> 4.0.1'
   pod 'SDWebImage'
-  #pod 'RealmSwift', '~> 2.10.1'
+  pod 'RealmSwift'
 
   target 'MovieInvolvedTests' do
     inherit! :search_paths

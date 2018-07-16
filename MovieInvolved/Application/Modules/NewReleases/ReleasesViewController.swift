@@ -63,8 +63,8 @@ class ReleasesViewController: BaseViewController, ReleasesViewContract {
             return
         }
         
-        self.navigationController?.isNavigationBarHidden    = false
-        self.navigationController?.topViewController?.title = "New releases"
+        navigationController.isNavigationBarHidden    = false
+        navigationController.topViewController?.title = "New releases"
                 
         moviesCollectionView.setupWith(movies: [], navigationController: navigationController)
     }
@@ -79,6 +79,7 @@ extension ReleasesViewController: MoviesCollectionViewContract {
     func goToDetail(id: Int) {
         let viewController = UIStoryboard.loadViewController() as MovieDetailViewController
         viewController.movieId = id
+        viewController.isLocal = false
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

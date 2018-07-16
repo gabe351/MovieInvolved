@@ -6,11 +6,12 @@
 //  Copyright © 2018 Gabe. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
 
 class InjectionLocalDataSource {
+    static let realm = try! Realm()
     
     static func provideMovieLocalDataSource() -> MovieLocalDataSource {
-        return MovieLocalDataSourceImpl.getInstance()
+        return MovieLocalDataSourceImpl.getInstance(realm: realm)
     }    
 }

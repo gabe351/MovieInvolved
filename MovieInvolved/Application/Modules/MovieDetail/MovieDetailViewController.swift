@@ -20,8 +20,10 @@ class MovieDetailViewController: BaseViewController, MovieDetailViewContract {
     @IBOutlet weak var movieDescriptionTextView: UITextView!
     
     var movieId: Int = 0
+    var isLocal = false
     
     let loader = LoadingViewController()
+    var movieDetail: MovieDetail?
     
     lazy var presenter: MovieDetailPresenterContract = {
        return MovieDetailPresenter(view: self,
@@ -39,21 +41,12 @@ class MovieDetailViewController: BaseViewController, MovieDetailViewContract {
     }
     
     func show(detail: MovieDetail) {
-        var fullGenres = [String]()
         movieImageView.setImageFrom(url: RemoteUtils.buildImageUrl(path: detail.posterPath), placeholder: #imageLiteral(resourceName: "moviePlaceholder"))
-        movieTitle.text       = detail.title
-        releaseDateLabel.text = "Release: \(detail.releaseDate)"
+        movieTitle.text               = detail.title
+        releaseDateLabel.text         = "Release: \(detail.releaseDate)"
         movieDescriptionTextView.text = detail.overview
-        
-        detail.genres.forEach { (genre) in
-            fullGenres.append(genre.name)
-        }
-        
-        genreLabel.text = "Genre \(fullGenres)"
-        
-        if fullGenres.isEmpty {
-            genreLabel.text = "Genre: "
-        }
+        genreLabel.text               = "Genre: \(detail.genres.first?.name ?? " ")"
+        movieDetail                   = detail
     }
     
     func onError() {
@@ -75,7 +68,26 @@ class MovieDetailViewController: BaseViewController, MovieDetailViewContract {
             return
         }
         
+        if !isLocal {
+            let save = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveMovie))
+            self.navigationItem.setRightBarButton(save, animated: true)
+        }
+                
         navigationController.isNavigationBarHidden    = false
         navigationController.topViewController?.title = "Movie detail"
+    }
+    
+    @objc func saveMovie() {
+        guard let detail = movieDetail else {
+            return
+        }
+        
+        presenter.save(movie: detail)
+    }
+    
+    func onSaveSuccess() {
+        ToastBuilder(message: "Save success", view: self.view)
+            .with(position: .center)
+            .show()
     }
 }

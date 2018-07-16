@@ -32,5 +32,10 @@ class MovieDetailPresenter: MovieDetailPresenterContract {
             }
         }
     }
+    
+    func save(movie: MovieDetail) {
+        let _ = getMovie.save(movie: movie)
+        view.onSaveSuccess()
+    }
 }
 

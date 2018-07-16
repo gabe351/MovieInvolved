@@ -6,15 +6,20 @@
 //  Copyright © 2018 Gabe. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
 
 class MovieLocalDataSourceImpl: MovieLocalDataSource {
         
     private static var INSTANCE: MovieLocalDataSourceImpl?
+    private let realm: Realm
     
-    public static func getInstance() -> MovieLocalDataSourceImpl {
+    private init (realm: Realm) {
+        self.realm = realm
+    }
+    
+    public static func getInstance(realm: Realm) -> MovieLocalDataSourceImpl {
         if (INSTANCE == nil) {
-            INSTANCE = MovieLocalDataSourceImpl()
+            INSTANCE = MovieLocalDataSourceImpl(realm: realm)
         }
         
         return INSTANCE!
@@ -25,28 +30,43 @@ class MovieLocalDataSourceImpl: MovieLocalDataSource {
     }
     
     func findMovieDetailBy(id: Int) -> MovieDetail {
-        return MovieDetail(id: 1,
+        let entry = realm.object(ofType: MovieEntry.self, forPrimaryKey: id)
+        
+        if let foundEntry = entry {
+            return MovieConverter.entryToDetail(entry: foundEntry)
+        }
+        
+        return MovieDetail(id: 0,
                            title: "",
                            originalTitle: "",
-                           voteAverage: 3.0,
+                           voteAverage: 0.0,
                            posterPath: "",
                            backdropPath: "",
                            overview: "",
                            genres: [Genre](),
-                           runtime: 1,
+                           runtime: 0,
                            releaseDate: "")
     }
     
-    func allMovies() -> Movie {
-        return Movie(id: 1,
-                     title: "",
-                     originalTitle: "",
-                     voteAverage: 3.9,
-                     posterPath: "",
-                     releaseDate: "")
+    func allMovies() -> [Movie] {        
+        let entries = realm.objects(MovieEntry.self)
+        
+        return MovieConverter.entriesToEntities(entries: Array(entries))
     }
     
-    func save(movie: Movie) {
+    func save(movie: MovieDetail) -> MovieDetail? {
+        var savedMovie: MovieDetail?
+        do {
+            
+            try realm.write {
+                let entry = MovieConverter.detailToEntry(entity: movie)
+                realm.add(entry, update: true)
+                savedMovie = findMovieDetailBy(id: entry.id)
+            }
+        } catch {
+            return nil
+        }
         
+        return savedMovie
     }
 }
