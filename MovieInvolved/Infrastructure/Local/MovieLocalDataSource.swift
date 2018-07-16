@@ -15,4 +15,6 @@ protocol MovieLocalDataSource {
     func allMovies() -> [Movie]
     
     func save(movie: MovieDetail) -> MovieDetail?
+    
+    func destroyBy(id: Int)
 }

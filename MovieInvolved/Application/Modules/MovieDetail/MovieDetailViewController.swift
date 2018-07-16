@@ -71,6 +71,9 @@ class MovieDetailViewController: BaseViewController, MovieDetailViewContract {
         if !isLocal {
             let save = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveMovie))
             self.navigationItem.setRightBarButton(save, animated: true)
+        } else {
+            let delete = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(destroyMovie))
+            self.navigationItem.setRightBarButton(delete, animated: true)
         }
                 
         navigationController.isNavigationBarHidden    = false
@@ -83,6 +86,18 @@ class MovieDetailViewController: BaseViewController, MovieDetailViewContract {
         }
         
         presenter.save(movie: detail)
+    }
+    
+    @objc func destroyMovie() {
+        guard let detail = movieDetail else {
+            return
+        }
+        
+        presenter.destroyBy(id: detail.id)
+    }
+    
+    func destroySuccess() {        
+        self.navigationController?.popViewController(animated: true)
     }
     
     func onSaveSuccess() {

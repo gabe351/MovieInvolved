@@ -28,6 +28,10 @@ class GetMovies {
         return repository.save(movie: movie)
     }
     
+    func destroyBy(id: Int) {
+        repository.destroyBy(id: id)
+    }
+    
     func allReleasesBy(page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
         repository.allReleasesBy(page: page, loadCallback)
     }

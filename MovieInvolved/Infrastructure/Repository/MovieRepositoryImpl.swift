@@ -48,6 +48,10 @@ class MovieRepositoryImpl: MovieRepository {
         return localDataSource.save(movie: movie)
     }
     
+    func destroyBy(id: Int) {
+        localDataSource.destroyBy(id: id)        
+    }
+    
     func searchMovieBy(query: String, page: Int, _ loadCallback: @escaping (BaseCallback<[Movie]>) -> Void) {
         remoteDataSource.searchMovieBy(query: query, page: page, loadCallback)
     }

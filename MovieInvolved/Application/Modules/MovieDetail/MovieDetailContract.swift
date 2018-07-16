@@ -14,9 +14,11 @@ protocol MovieDetailViewContract {
     func showLoader()
     func hideLoader()
     func onSaveSuccess()
+    func destroySuccess()
 }
 
 protocol MovieDetailPresenterContract {
     func loadMovieDetail(id: Int)
     func save(movie: MovieDetail)
+    func destroyBy(id: Int)
 }

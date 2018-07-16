@@ -33,6 +33,11 @@ class MovieDetailPresenter: MovieDetailPresenterContract {
         }
     }
     
+    func destroyBy(id: Int) {
+        view.destroySuccess()
+        getMovie.destroyBy(id: id)
+    }
+    
     func save(movie: MovieDetail) {
         let _ = getMovie.save(movie: movie)
         view.onSaveSuccess()

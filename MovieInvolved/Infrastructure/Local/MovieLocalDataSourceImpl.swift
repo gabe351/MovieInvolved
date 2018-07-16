@@ -69,4 +69,17 @@ class MovieLocalDataSourceImpl: MovieLocalDataSource {
         
         return savedMovie
     }
+    
+    func destroyBy(id: Int) {
+        do {
+            try realm.write {
+                let objectToDelete = realm.object(ofType: MovieEntry.self, forPrimaryKey: id)
+                if let foundEntry = objectToDelete {
+                    realm.delete(foundEntry)
+                }
+            }        
+        } catch {
+            
+        }
+    }
 }
