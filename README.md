@@ -17,11 +17,15 @@ $ open MovieInvolved.xcworkspace
 
 ## Pictures
 
-Main menu
+### Main menu
+<p> 
 <img src="https://github.com/gabe351/MovieInvolved/blob/develop/screenshots/Screen%20Shot%202018-07-16%20at%2010.00.53.png" width="150">
+</p>
 
-Finding movie
+### Finding movie
+<p>
 <img src="https://github.com/gabe351/MovieInvolved/blob/develop/screenshots/Screen%20Shot%202018-07-16%20at%2010.00.41.png" width="150">
+</p>
 
 ## Next updates
 
