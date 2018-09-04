@@ -4,7 +4,7 @@ before_script:
     - brew update
 
 script:
-    - xctool -workspace MovieInvolved.xcworkspace -scheme MovieInvolved -sdk iphonesimulator build test
+   - xcodebuild clean build -sdk iphonesimulator -workspace MovieInvolved.xcworkspace -scheme MovieInvolved CODE_SIGNING_REQUIRED=NO
 
 branches:
   only:
