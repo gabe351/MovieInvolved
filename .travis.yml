@@ -1,0 +1,11 @@
+language: objective-c
+
+before_script:
+    - brew update && brew upgrade xctool
+
+script:
+    - xctool -workspace MovieInvolved.xcworkspace -scheme MovieInvolved -sdk iphonesimulator clean build test
+
+branches:
+  only:
+    - master
