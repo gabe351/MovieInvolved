@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="aQc-Wa-Aet">
+            <objects>
+                <viewController storyboardIdentifier="MovieDetailID" id="1FY-wH-IU2" customClass="MovieDetailViewController" customModule="MovieInvolved" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1YF-Hg-7lI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YwV-sc-J4f">
+                                <rect key="frame" x="18" y="52" width="337" height="309"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvk-eO-4Gp">
+                                <rect key="frame" x="0.0" y="375" width="375" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="37E-PX-3TJ">
+                                <rect key="frame" x="8" y="465" width="359" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95H-Sz-Qqk">
+                                <rect key="frame" x="8" y="439" width="359" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3GB-fw-bgl">
+                                <rect key="frame" x="7" y="492" width="360" height="165"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YwV-sc-J4f" firstAttribute="top" secondItem="vdo-qI-42z" secondAttribute="top" constant="32" id="0mk-7F-P90"/>
+                            <constraint firstItem="37E-PX-3TJ" firstAttribute="top" secondItem="vdo-qI-42z" secondAttribute="top" constant="445" id="7DS-K4-lJ3"/>
+                            <constraint firstItem="vdo-qI-42z" firstAttribute="trailing" secondItem="wvk-eO-4Gp" secondAttribute="trailing" id="9Sl-Rh-3oZ"/>
+                            <constraint firstItem="37E-PX-3TJ" firstAttribute="leading" secondItem="vdo-qI-42z" secondAttribute="leading" constant="8" id="BL0-eR-5ud"/>
+                            <constraint firstItem="vdo-qI-42z" firstAttribute="trailing" secondItem="YwV-sc-J4f" secondAttribute="trailing" constant="19.889438709838373" id="G4C-2b-nYK"/>
+                            <constraint firstItem="YwV-sc-J4f" firstAttribute="leading" secondItem="vdo-qI-42z" secondAttribute="leading" constant="18.11056129016157" id="GiT-eG-cK9"/>
+                            <constraint firstItem="vdo-qI-42z" firstAttribute="bottom" secondItem="95H-Sz-Qqk" secondAttribute="bottom" constant="228" id="IyM-Ke-TYP"/>
+                            <constraint firstItem="vdo-qI-42z" firstAttribute="bottom" secondItem="YwV-sc-J4f" secondAttribute="bottom" constant="306" id="Mbj-4n-VxN"/>
+                            <constraint firstItem="vdo-qI-42z" firstAttribute="trailing" secondItem="3GB-fw-bgl" secondAttribute="trailing" constant="8" id="Ob9-I4-7la"/>
+                            <constraint firstItem="3GB-fw-bgl" firstAttribute="top" secondItem="vdo-qI-42z" secondAttribute="top" constant="472" id="PqJ-73-Uyv"/>
+                            <constraint firstItem="vdo-qI-42z" firstAttribute="trailing" secondItem="95H-Sz-Qqk" secondAttribute="trailing" constant="8" id="QqW-UJ-26I"/>
+                            <constraint firstItem="vdo-qI-42z" firstAttribute="trailing" secondItem="37E-PX-3TJ" secondAttribute="trailing" constant="8" id="dYz-CF-5Wl"/>
+                            <constraint firstItem="wvk-eO-4Gp" firstAttribute="leading" secondItem="vdo-qI-42z" secondAttribute="leading" id="hFb-kX-CUF"/>
+                            <constraint firstItem="wvk-eO-4Gp" firstAttribute="top" secondItem="vdo-qI-42z" secondAttribute="top" constant="355" id="isD-re-AYg"/>
+                            <constraint firstItem="3GB-fw-bgl" firstAttribute="leading" secondItem="vdo-qI-42z" secondAttribute="leading" constant="7" id="sec-QJ-LPi"/>
+                            <constraint firstItem="95H-Sz-Qqk" firstAttribute="leading" secondItem="vdo-qI-42z" secondAttribute="leading" constant="8" id="upa-Jf-qzG"/>
+                            <constraint firstItem="vdo-qI-42z" firstAttribute="bottom" secondItem="3GB-fw-bgl" secondAttribute="bottom" constant="10" id="vop-29-vd7"/>
+                            <constraint firstItem="vdo-qI-42z" firstAttribute="bottom" secondItem="wvk-eO-4Gp" secondAttribute="bottom" constant="262" id="xfp-jv-Tw2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vdo-qI-42z"/>
+                    </view>
+                    <connections>
+                        <outlet property="genreLabel" destination="37E-PX-3TJ" id="Djy-iL-GJv"/>
+                        <outlet property="movieDescriptionTextView" destination="3GB-fw-bgl" id="4qe-TP-ahI"/>
+                        <outlet property="movieImageView" destination="YwV-sc-J4f" id="5I2-iy-SJx"/>
+                        <outlet property="movieTitle" destination="wvk-eO-4Gp" id="PYi-ov-2qY"/>
+                        <outlet property="releaseDateLabel" destination="95H-Sz-Qqk" id="p0z-nc-Cvo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="REi-tY-pkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.799999999999997" y="158.77061469265368"/>
+        </scene>
+    </scenes>
+</document>
