@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/gabe351/MovieInvolved.svg?branch=master)](https://travis-ci.com/gabe351/MovieInvolved)
+
 # MovieInvolved
 
 This is a simple app to search for movies and save your favorite ones.
